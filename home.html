@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style_home.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div id="logo"><button id="calendar-btn">📅</button>Gurlsgoals</div>
+        <div class="pilihan">
+            <button id="home-btn"><b>Home</b></button>
+            <button id="about-btn"><b>About</b></button>
+            <button id="my-calender-btn"><b>My Calender</b></button>
+            <button id="logout"><b>Log Out</b></button>
+        </div>
+    </nav>
+
+    <div class="page1">
+        <div id="description">
+            <h1><b>Ingin Diet?!</b></h1>
+            <p><b>Halo pejuang diet! We're here to help you to get your body goals!</b></p>
+            <p><b>Diet sehat dan teratur selama 1 bulann, emang bisa ??</b></p>
+        </div>
+    </div>
+
+    <div class="page2">
+        <div class="line"></div>
+        <p>Sebelumnya apakah kalian tau BMI (Body Mass Index) </p>
+        <p>kalian berada di kategori mana ?</p>
+        <div class="container">
+            <div class="item">
+              <span class="number">18,5</span>
+              <span class="line"></span>
+              <span class="text">Underweight</span>
+            </div>
+            <div class="item">
+              <span class="number">18,5 - 24,9</span>
+              <span class="line"></span>
+              <span class="text">Normal Weight</span>
+            </div>
+            <div class="item">
+              <span class="number">25 - 29,9</span>
+              <span class="line"></span>
+              <span class="text">Overweight</span>
+            </div>
+            <div class="item">
+                <span class="number">30 - ++ </span>
+                <span class="line"></span>
+                <span class="text">Obese</span>
+              </div>
+        </div>   
+        <button id="detail"><b>SEE MORE DETAIL</b></button>
+        <div class="line"></div>
+    </div>
+
+    <div class="page3">
+        <p>Exercise Recommendations</p>
+    
+        <div class="image-slider">
+            <div class="slides">
+                <img src="JalanKaki.jpg" alt="Image 1" onclick="openModal('JalanKaki.jpg', 'JALAN KAKI', 'Berjalan kaki bagus untuk menurunkan berat badan dan juga sangat mudah dilakukan. Anda tidak membutuhkan perlengkapan atau pakaian khusus untuk berjalan kaki. Selain itu, berjalan kaki juga bisa Anda lakukan di mana dan kapan saja. Anda bisa menargetkan untuk berjalan kaki selama 30 menit setiap harinya. Penelitian menunjukkan, berjalan kaki dengan durasi ini mampu membakar setidaknya 167 kalori tubuh. Semakin sering melakukannya, Anda akan semakin terbiasa. Jika sudah menjadi kebiasaan, Anda bisa meningkatkan lama waktu berjalan kaki agar lebih banyak kalori yang terbuang.')">
+                <img src="jogging.jpg" alt="Image 2" onclick="openModal('jogging.jpg', 'Jogging Exercise')">
+                <img src="beladiri.png" alt="Image 3" onclick="openModal('beladiri.webp', 'Martial Arts Exercise')">
+                <img src="berenang.jpg" alt="Image 4" onclick="openModal('berenang.jpg', 'Martial Arts Exercise')">
+                <img src="lompatTali.webp" alt="Image 5" onclick="openModal('lompatTali.webp', 'Martial Arts Exercise')">
+                <img src="bersepeda.webp" alt="Image 6" onclick="openModal('bersepeda.webp', 'Martial Arts Exercise')">
+                <img src="pilates.jpg" alt="Image 7" onclick="openModal('pilates.jpg', 'Martial Arts Exercise')">
+                <img src="yoga.jpg" alt="Image 8" onclick="openModal('yoga.jpg', 'Martial Arts Exercise')">
+                <img src="senamAerobik.jpg" alt="Image 9" onclick="openModal('senamAerobik.jpg', 'Martial Arts Exercise')">
+                <img src="intervalTraining.webp" alt="Image 10" onclick="openModal('intervalTraining.webp', 'Martial Arts Exercise')">
+                <img src="naikturuntangga.webp" alt="Image 11" onclick="openModal('naikturuntangga.webp', 'Martial Arts Exercise')">   
+            </div>
+        </div>
+    
+        <div class="modal" id="myModalExercise">
+            <span class="close" onclick="closeModal('myModalExercise')">×</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div> 
+            <p id="exerciseTitle"></p>
+            <div id="exerciseDescription"></div>
+        </div>        
+
+        <p>Food Recommendations</p>
+        <div class="image-slider1">
+            <div class="slides1">
+                <img src="buah.jpg" alt="Image 1" onclick="openModal('buah.jpg', 'Walking Exercise')">
+                <img src="kentang.webp" alt="Image 2" onclick="openModal('kentang.webp', 'Jogging Exercise')">
+                <img src="alpuket.jpg" alt="Image 3" onclick="openModal('alpuket.jpg', 'Martial Arts Exercise')">
+                <img src="daging.jpeg" alt="Image 4" onclick="openModal('daging.jpeg', 'Martial Arts Exercise')">
+                <img src="salmon.jpg" alt="Image 5" onclick="openModal('salmon.jpg', 'Martial Arts Exercise')">
+                <img src="kacang.jpg" alt="Image 6" onclick="openModal('kacang.jpg', 'Martial Arts Exercise')">
+                <img src="sayur.jpg" alt="Image 7" onclick="openModal('sayur.jpg', 'Martial Arts Exercise')">
+                <img src="telur.jpg" alt="Image 8" onclick="openModal('telur.jpg', 'Martial Arts Exercise')">
+                <img src="yogurt.jpg" alt="Image 9" onclick="openModal('yogurt.jpg', 'Martial Arts Exercise')">
+                <img src="gandum.jpg" alt="Image 10" onclick="openModal('gandum.jpg', 'Martial Arts Exercise')">
+                <img src="biji chia.jpg" alt="Image 11" onclick="openModal('nbiji chia.jpg', 'Martial Arts Exercise')">   
+            </div>
+        </div>
+    
+        <div class="modal" id="myModalFood">
+            <span class="close" onclick="closeModal('myModalFood')">×</span>
+            <img class="modal-content" id="modalImage1">
+            <div id="caption1"></div>
+        </div>
+        <script src="main.js"></script>
+        
+    </div>
+    
+
+</body>
+</html>

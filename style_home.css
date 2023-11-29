@@ -1,0 +1,257 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FEE9F2;
+}
+
+.navbar {
+    background-color: #f8f8f8;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 50px;
+}
+
+#calendar-btn {
+    font-size: 25px;
+    position: relative;
+    margin-right: 5px;
+    border: none; 
+    background-color: transparent; 
+}
+
+.pilihan{
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+.pilihan button{
+    margin-right: 5px;
+    border: none;
+    background-color: transparent;
+    padding: 8px 12px; 
+    border-radius: 5px; 
+    color: black; 
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#home-btn {
+    background-color: #F77BB6; 
+    padding: 8px 12px;
+    border: none;
+    color: white; 
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.page1 {
+    height: 100vh;
+    background-image: url('jus.jpg');
+    background-position: center;
+    background-size: cover;
+    background-position: initial;
+    display: flex;
+    align-items: center;
+}
+
+#description {
+    color: black;
+    max-width: 100%;
+    margin: 0 auto; 
+    text-align: center;   
+}
+
+#description h1 {
+    font-size: 70px;
+}
+
+#description p {
+    font-size: 20px;
+}
+
+/*page2*/
+.page2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.line {
+    height: 2px;
+    width: 70%;
+    background-color: black; 
+    margin: 10px auto;
+    margin-bottom: 10px;
+  }
+  
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.number {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.item .line {
+    height: 2px;
+    width: 70%;
+    background-color: #F77BB6; 
+    margin: 5px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+#detail{
+    background-color: #F77BB6;
+    font-size: 15px;
+    border: none;
+    padding: 8px 15px; 
+    border-radius: 20px; 
+    color: white; 
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* page3 */
+
+.page3 p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.image-slider, .image-slider1 {
+    overflow: hidden;
+    max-width: 600px;
+    max-height: 500px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.slides, .slides1 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.modal, .modal1 {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.modal::before, .modal1::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('awan.jpg');
+    background-size: cover;
+    opacity: 1; 
+}
+
+.modal-content, .modal-content1 {
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 20px;
+    box-shadow: 0 0 20px 5px rgba(255, 182, 193, 0.9);
+}
+
+#caption {
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+#exerciseInfo {
+    padding: 20px;
+}
+
+#exerciseTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px; /* Menambahkan margin bottom */
+}
+
+#exerciseTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+#exerciseDescription {
+    font-size: 16px;
+    text-align: left;
+    color: black;
+}
+
+.close, .close1 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #F77BB6;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -85,3 +85,11 @@ document.addEventListener('click', function (event) {
         closeModal('myModalFood');
     }
 });
+
+function alihkanKeHome() {
+    // Anda dapat menambahkan logika validasi masuk Anda di sini sebelum mengalihkan
+    // Untuk kesederhanaan, mari kita asumsikan validasinya berhasil dan lanjutkan ke halaman beranda
+
+    // Alihkan ke halaman home.html
+    window.location.href = "home.html";
+}

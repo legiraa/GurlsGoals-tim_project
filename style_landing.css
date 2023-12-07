@@ -16,18 +16,17 @@ body {
 }
 
 #logo {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
     color: black;
     padding-left: 50px;
 }
 
 #signin-btn{
-    color: black;
     padding: 10px 15px;
-    border: none;
     cursor: pointer;
     margin-left: 10px;
+    border: none;
     background-color: transparent;
     margin-right: 10px;
 }
@@ -43,11 +42,13 @@ body {
 }
 
 #calendar-btn {
-    font-size: 20px;
-    cursor: pointer;
+    font-size: 25px;
     position: relative;
-    margin-right: 10px;
+    margin-right: 5px;
+    border: none; 
+    background-color: transparent; 
 }
+
 
 .page1 {
     color: black;

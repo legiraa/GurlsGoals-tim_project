@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style_BMI.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+    <title>BMI</title>
+</head>
+<body>
+<div class="calculator">
+    <h1>Body Mass Index</h1>
+    <h2>Body Mass Index (BMI) atau indeks massa tubuh  digunakan untuk mengetahui apakah berat badan termasuk dalam kategori normal, berlebih, atau justru kurang. Yukk cekk... </h2>
+       
+    <div class="TB">
+        <input type="number" id="weight" placeholder="Berat (kg)" required>
+        <p><input type="number" id="height" placeholder="Tinggi (cm)" required></p>
+
+        <button onclick="calculateBMI()">HITUNG</button>
+    </div>
+    <button id="result"></button>
+</div>
+
+<script src="main.js"></script>
+
+<div class="table-container">
+    <table id="bmi-table">
+      <caption>Golongan Berat Badan</caption>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>BMI Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Underweight (Berat Badan Kurang)</td>
+          <td>&lt; 18.5</td>
+        </tr>
+        <tr>
+          <td>Normal Weight (Ideal)</td>
+          <td>18.5 - 24.9</td>
+        </tr>
+        <tr>
+          <td>Overweight (Agak Gemuk)</td>
+          <td>25 - 29.9</td>
+        </tr>
+        <tr>
+          <td>Obesity (Terlalu Gemuk)</td>
+          <td>&ge; 30</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+</body>
+</html>

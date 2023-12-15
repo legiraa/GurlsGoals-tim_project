@@ -1,3 +1,9 @@
+/*Dari log-in pindah ke Halaman Jome*/
+function alihkanKeHome() {
+    window.location.href = "home.html";
+}
+
+/*Agar gambar bergulir*/
 let currentSlide = 0;
 let currentSlide1 = 0;
 
@@ -24,20 +30,6 @@ function changeSlide(direction, sliderClass) {
     }
 }
 
-function openModal(imageSrc, exerciseCaption, exerciseDescription) {
-    const modal = document.getElementById('myModalExercise');
-    const modalImage = document.getElementById('modalImage');
-    const exerciseTitle = document.getElementById('exerciseTitle');
-    const exerciseDescriptionElement = document.getElementById('exerciseDescription');
-
-    modalImage.src = imageSrc;
-    exerciseTitle.innerHTML = exerciseCaption;
-    exerciseDescriptionElement.innerHTML = "<p>" + exerciseDescription + "</p>";
-
-    modal.style.display = 'block';
-}
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelector('.slides');
     const slides1 = document.querySelector('.slides1');
@@ -51,37 +43,55 @@ document.addEventListener('DOMContentLoaded', function () {
     slides1.style.transform = `translateX(${-currentSlide1 * slideWidth1}px)`;
 })
 
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'none';
+/*Memunculkan modal*/
+function openModal(imageSrc, title, description) {
+    var modal = document.getElementById("modal");
+    var modalImage = modal.querySelector(".modal-content");
+    var titleElement = modal.querySelector("#titleModal");
+    var descriptionElement = modal.querySelector("#descriptionModal");
+
+    document.body.style.overflow = 'hidden';
+
+    modalImage.src = imageSrc;
+    titleElement.innerText = title;
+    descriptionElement.innerHTML = description;
+
+    modal.style.display = "block";
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+    document.body.style.overflow = 'auto';
+}
 
-    // Tambahkan script untuk menutup modal saat tombol x diklik
-    const closeButton = document.querySelector('.close');
-    const closeButton1 = document.querySelector('.close1');
-
-    if (closeButton) {
-        closeButton.addEventListener('click', function () {
-            closeModal('myModalExercise');
-        });
+window.onclick = function (event) {
+    if (event.target.className === "modal") {
+        event.target.style.display = "none";
     }
+};
 
-    if (closeButton1) {
-        closeButton1.addEventListener('click', function () {
-            closeModal('myModalFood');
-        });
+/*Dari Home Pindah ke halaman Kalkulator BMI*/
+function goToBMIPage() {
+    window.location.href = "BMI.html";
+}
+
+/*Calculator BMI*/
+function calculateBMI() {
+    
+    var weight = parseFloat(document.getElementById('weight').value);
+    var height = parseFloat(document.getElementById('height').value);
+  
+    
+    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+      document.getElementById('result').innerHTML = 'Isi Dulu Yaaa!';
+      return;
     }
+  
+    var bmi = weight / Math.pow(height / 100, 2);
+  
+    var resultElement = document.getElementById('result');
+    resultElement.innerHTML = 'Hasil Body Mass Index : ' + bmi.toFixed(2);
+  }
+  
 
-    // ... (your existing code)
-});
-
-// Tambahkan script untuk menutup modal saat di luar area gambar
-document.addEventListener('click', function (event) {
-    const modal = document.querySelector('.modal');
-    if (event.target === modal) {
-        closeModal('myModalExercise');
-        closeModal('myModalFood');
-    }
-});

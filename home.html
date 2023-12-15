@@ -55,62 +55,126 @@
                 <span class="text">Obese</span>
               </div>
         </div>   
-        <button id="detail"><b>SEE MORE DETAIL</b></button>
+        <button id="detail" onclick="goToBMIPage()"><b>SEE MORE DETAIL</b></button>
         <div class="line"></div>
     </div>
 
     <div class="page3">
-        <p>Exercise Recommendations</p>
-    
-        <div class="image-slider">
-            <div class="slides">
-                <img src="JalanKaki.jpg" alt="Image 1" onclick="openModal('JalanKaki.jpg', 'JALAN KAKI', 'Berjalan kaki bagus untuk menurunkan berat badan dan juga sangat mudah dilakukan. Anda tidak membutuhkan perlengkapan atau pakaian khusus untuk berjalan kaki. Selain itu, berjalan kaki juga bisa Anda lakukan di mana dan kapan saja. Anda bisa menargetkan untuk berjalan kaki selama 30 menit setiap harinya. Penelitian menunjukkan, berjalan kaki dengan durasi ini mampu membakar setidaknya 167 kalori tubuh. Semakin sering melakukannya, Anda akan semakin terbiasa. Jika sudah menjadi kebiasaan, Anda bisa meningkatkan lama waktu berjalan kaki agar lebih banyak kalori yang terbuang.')">
-                <img src="jogging.jpg" alt="Image 2" onclick="openModal('jogging.jpg', 'Jogging Exercise')">
-                <img src="beladiri.png" alt="Image 3" onclick="openModal('beladiri.webp', 'Martial Arts Exercise')">
-                <img src="berenang.jpg" alt="Image 4" onclick="openModal('berenang.jpg', 'Martial Arts Exercise')">
-                <img src="lompatTali.webp" alt="Image 5" onclick="openModal('lompatTali.webp', 'Martial Arts Exercise')">
-                <img src="bersepeda.webp" alt="Image 6" onclick="openModal('bersepeda.webp', 'Martial Arts Exercise')">
-                <img src="pilates.jpg" alt="Image 7" onclick="openModal('pilates.jpg', 'Martial Arts Exercise')">
-                <img src="yoga.jpg" alt="Image 8" onclick="openModal('yoga.jpg', 'Martial Arts Exercise')">
-                <img src="senamAerobik.jpg" alt="Image 9" onclick="openModal('senamAerobik.jpg', 'Martial Arts Exercise')">
-                <img src="intervalTraining.webp" alt="Image 10" onclick="openModal('intervalTraining.webp', 'Martial Arts Exercise')">
-                <img src="naikturuntangga.webp" alt="Image 11" onclick="openModal('naikturuntangga.webp', 'Martial Arts Exercise')">   
-            </div>
-        </div>
-    
-        <div class="modal" id="myModalExercise">
-            <span class="close" onclick="closeModal('myModalExercise')">×</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div> 
-            <p id="exerciseTitle"></p>
-            <div id="exerciseDescription"></div>
-        </div>        
+        <h3>Exercise Recommendations</h3>
 
-        <p>Food Recommendations</p>
-        <div class="image-slider1">
-            <div class="slides1">
-                <img src="buah.jpg" alt="Image 1" onclick="openModal('buah.jpg', 'Walking Exercise')">
-                <img src="kentang.webp" alt="Image 2" onclick="openModal('kentang.webp', 'Jogging Exercise')">
-                <img src="alpuket.jpg" alt="Image 3" onclick="openModal('alpuket.jpg', 'Martial Arts Exercise')">
-                <img src="daging.jpeg" alt="Image 4" onclick="openModal('daging.jpeg', 'Martial Arts Exercise')">
-                <img src="salmon.jpg" alt="Image 5" onclick="openModal('salmon.jpg', 'Martial Arts Exercise')">
-                <img src="kacang.jpg" alt="Image 6" onclick="openModal('kacang.jpg', 'Martial Arts Exercise')">
-                <img src="sayur.jpg" alt="Image 7" onclick="openModal('sayur.jpg', 'Martial Arts Exercise')">
-                <img src="telur.jpg" alt="Image 8" onclick="openModal('telur.jpg', 'Martial Arts Exercise')">
-                <img src="yogurt.jpg" alt="Image 9" onclick="openModal('yogurt.jpg', 'Martial Arts Exercise')">
-                <img src="gandum.jpg" alt="Image 10" onclick="openModal('gandum.jpg', 'Martial Arts Exercise')">
-                <img src="biji chia.jpg" alt="Image 11" onclick="openModal('nbiji chia.jpg', 'Martial Arts Exercise')">   
+        <div class="image-slider">
+            <div class="image-slider1">
+                <div class="slides">
+                    <img src="JalanKaki.jpg" onclick="openModal('JalanKaki.jpg', 'JALAN KAKI', 'Berjalan kaki bagus untuk menurunkan berat badan dan juga sangat mudah dilakukan. Anda tidak membutuhkan perlengkapan atau pakaian khusus untuk berjalan kaki. Selain itu, berjalan kaki juga bisa Anda lakukan di mana dan kapan saja. Anda bisa menargetkan untuk berjalan kaki selama 30 menit setiap harinya. Penelitian menunjukkan, berjalan kaki dengan durasi ini mampu membakar setidaknya 167 kalori tubuh. Semakin sering melakukannya, Anda akan semakin terbiasa. Jika sudah menjadi kebiasaan, Anda bisa meningkatkan lama waktu berjalan kaki agar lebih banyak kalori yang terbuang.')">
+                    <img src="jogging.jpg" onclick="openModal('jogging.jpg', 'JOGGING', 'Jogging bisa menjadi olahraga untuk diet menurunkan berat badan yang bisa anda lakukan secara rutin. ama halnya dengan berjalan kaki, jogging tidak membutuhkan perlengkapan khusus, cukup sepatu lari dan pakaian nyaman saja. Jika tidak terbiasa untuk berlari di ruang terbuka, Anda juga bisa berlari menggunakan treadmill. Untuk mengawalinya, cobalah untuk jogging atau berlari santai selama 20-30 menit per hari. Jika Anda melakukannya secara rutin, lama waktu Anda melakukannya juga pasti akan meningkat karena sudah terbiasa')">
+                    <img src="beladiri.png" onclick="openModal('beladiri.png', 'BELA DIRI', 'Bela diri atau martial arts bisa jadi pilihan olahraga penurun berat badan dengan tantangan cukup tinggi. Ada berbagai jenis olahraga bela diri yang kini bisa Anda lakukan, antara lain pencak silat, tinju, muay thai, karate, taekwondo, dan lainnya. Setiap jenis bela diri memiliki ciri khas masing-masing, termasuk jumlah kalori yang terbakar setiap kali Anda latihan. Contohnya, karate, taekwondo, dan muay thai mampu membakar 590-931 kalori per jam. Sementara, tinju bisa membakar hingga 708-1.117 kalori per jam apabila Anda melakukan latih tanding di atas ring. Anda sebaiknya tidak latihan sendiri. Mengikuti kursus atau kelas khusus perlu Anda lakukan untuk bisa menguasai berbagai gerakan dengan benar, sekaligus menghindari risiko cedera.')">
+                    <img src="berenang.jpg" onclick="openModal('berenang.jpg', 'BERENANG', 'Berenang adalah alternatif olahraga yang menyenangkan untuk menurunkan berat badan. Terlbih jika Anda memiliki kolam renang pribadi, maka aktivitas ini bisa Anda lakukan setiap hari. Sebuah artikel dari Harvard Health menyebutkan, berenang selama 30 menit bisa membakar 298 kalori dengan renang gaya punggung, 372 kalori dengan renang gaya dada, dan 409 kalori dengan renang gaya kupu-kupu. Selain itu, manfaat berenang juga bisa Anda rasakan jika memiliki cedera atau masalah pada persendian. Hal ini karena olahraga ini tergolong low-impact sehingga tidak menimbulkan dampak berlebih pada tubuh.')">
+                    <img src="lompatTali.webp" onclick="openModal('lompatTali.webp', 'LOMPAT TALI', 'Lompat tali punya efektivitas pembakaran kalori yang kurang lebih sama dengan jogging.Lompat tali dengan intensitas rendah mampu membakar sekitar 281 kalori selama 30 menit. Namun jika Anda melakukan lompat tali dengan intensitas tinggi, latihan ini mampu membakar hingga 421 kalori dalam durasi yang sama. Jangan terlalu memaksakan saat Anda pertama kali melakukan lompat tali. Anda bisa saja melakukannya selama 20-30 menit, tapi lakukan cukup selama 5 menit dan berikan jeda istirahat hingga mencapai target yang Anda inginkan')">
+                    <img src="bersepeda.webp" onclick="openModal('bersepeda.webp', 'BERSEPEDA', 'Selain berfungsi sebagai sarana transportasi, bersepeda juga bisa Anda jadikan olahraga untuk menurunkan berat badan yang menyenangkan. Untuk Anda yang malas keluar rumah, Anda bisa menggunakan sepeda statis yang biasa tersedia di gym. Bersepeda luar ruangan selama 30 menit mampu membakar sekitar 280-360 kalori, sementara latihan dengan sepeda statis membakar sekitar 250-280 kalori dengan durasi yang sama. Tidak hanya membantu mengurangi berat badan, manfaat bersepeda juga berdampak baik bagi kesehatan secara keseluruhan. Bersepeda mampu menurunkan risiko penyakit jantung, kanker, dan penyebab kematian lainnya')">
+                    <img src="pilates.jpg" onclick="openModal('pilates.jpg', 'PILATES', 'Walaupun gerakannya hampir serupa dengan yoga, pilates merupakan versi lebih modern yang hadir sebagai bentuk latihan fisik yang berfokus pada rehabilitasi dan penguatan tubuh. Pilates memadukan serangkaian gerakan lambat dan pernapasan dalam. Untuk Anda yang masih pemula, latihan pilates terbilang cukup mudah. Latihan pilates pemula selama 30 menit mampu membakar sekitar 108 kalori, sementara untuk latihan lanjutan bisa membakar hingga 168 kalori. Salah satu keunggulan pilates adalah manfaat latihan ini untuk membantu pemulihan tubuh setelah cedera, menguatkan sendi yang lemah, serta mengurangi nyeri punggung. ')">
+                    <img src="yoga.jpg" onclick="openModal('yoga.jpg', 'YOGA', 'Meski latihan yoga umumnya secara bersama-sama, olahraga penurun berat badan ini bisa Anda lakukan sendirian. Apalagi saat ini sudah banyak video-video di internet yang dapat mengajarkan yoga secara online, maka Anda tidak perlu khawatir jika harus melakukannya tanpa instruktur. Yoga terbukti bisa mengurangi berat badan, walaupun jumlah kalori terbakar tidak terlalu banyak. Melakukan olahraga ini selama 40 menit mampu membakar sekitar 149 kalori. Selain itu, olahraga ini juga bermanfaat bagi kesehatan mental. Anda bisa lebih mengontrol tubuh dan hawa nafsu, misalnya nafsu makan makanan yang kurang sehat atau berlebihan. Hal ini tentu baik untuk membantu Anda mengatur pola makan saat diet.')">
+                    <img src="senamAerobik.jpg" onclick="openModal('senamAerobik.jpg', 'SENAM AEROBIK', 'Senam aerobik atau aerobik saja adalah jenis aktivitas yang mampu meningkatkan denyut jantung dan pernapasan selama berolahraga. Semua kalangan bisa melakukan gerakan senam aerobik dengan iringan musik untuk menambah semangat. Gerakan senam aerobik juga mampu membakar kalori dan membantu mengendalikan berat badan. Sebuah penelitian pada jurnal Obesity menunjukkan manfaat senam aerobik dalam penurunan berat badan pada orang obesitas. Hasilnya, terdapat penurunan berat badan sekitar 4,3-5,6 persen dengan melakukan senam aerobik 5 hari per minggu selama 10 bulan dengan rata-rata pembakaran 400-600 kalori pada tiap sesinya.')">
+                    <img src="intervalTraining.webp" onclick="openModal('intervalTraining.webp', 'Interval Training', 'Interval training atau yang lebih umum disebut high-intensity interval training (HIIT) merujuk pada istilah olahraga kardio intens untuk membakar kalori dalam waktu singkat. Biasanya latihan HIIT berlangsung antara 10-30 menit. Sebuah studi terbitan Journal of Strength and Conditioning Research pada 2015 menunjukkan bahwa HIIT mampu membakar 25 hingga 30 persen kalori lebih banyak daripada latihan beban, bersepeda, atau berlari. Olahraga HIIT juga dapat membantu mengecilkan perut buncit pada pria dan wanita. Walaupun hasilnya mungkin lebih cepat, olahraga ini butuh ketahanan tubuh lebih prima daripada lainnya.')">
+                    <img src="naikturuntangga.webp" onclick="openModal('naikturuntangga.webp', 'NAIK TURUN TANGGA', 'Berolahraga rutin tidak selamanya membutuhkan banyak peralatan. Bahkan, Anda bisa memanfaatkan hal-hal yang ada di sekitar, salah satunya adalah tangga. Olahraga naik turun tangga telah terbukti secara ilmiah mampu meningkatkan kebugaran dan membantu Anda dalam menurunkan berat badan. Setiap naik tangga 10 langkah, Anda akan membakar 1 kalori tubuh. Sementara untuk jumlah yang sama, Anda perlu menuruni tangga sebanyak 20 langkah. Melakukan latihan ini dalam beberapa kali repetisi, tentu akan mampu membakar kalori dalam jumlah cukup lumayan. Selain itu, penelitian dalam Medicine and Science in Sports and Exercise menyebutkan latihan naik turun tangga memberikan manfaat kesehatan dan kebugaran pada kelompok wanita lansia dengan obesitas, seperti tekanan darah stabil dan kepadatan tulang meningkat.')">   
+                </div>
+            </div>
+
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-image">
+                    <img class="modal-content" id="imgModal">
+                </div>
+                <div class="modal-description">
+                    <h3 id="titleModal"></h3>
+                    <p id="descriptionModal"></p>
+                </div>
+            </div>
+
+            <div class="text_exercise">
+                <p>Diet yang seimbang dan berolahraga secara teratur merupakan kombinasi efektif untuk mencapai dan menjaga berat badan ideal. Diet yang tepat
+                dapat membantu mengontrol asupan kalori, memberikan nutrisi esensial bagi tubuh, dan mendukung fungsi organ-organ vital. Selain itu, diet
+                yang sehat juga memiliki peran penting dalam meningkatkan mood, energi, serta mengurangi risiko berbagai penyakit kronis. Berolahraga merupakan
+                bagian integral dari upaya penurunan berat badan. Aktivitas fisik dapat membakar kalori, meningkatkan metabolisme, serta memperkuat otot dan
+                tulang. Berbagai jenis olahraga menurunkan berat badan, seperti berjalan kaki, jogging, bela diri, berenang, dan lainnya, dapat menjadi
+                pilihan untuk meningkatkan kebugaran dan membantu mencapai tujuan penurunan berat badan. Dengan mengombinasikan diet sehat dan rutin
+                berolahraga, Anda tidak hanya dapat mencapai berat badan yang diinginkan, tetapi juga meningkatkan kesehatan secara keseluruhan. Penting untuk
+                diingat bahwa setiap perubahan gaya hidup harus konsisten dan disesuaikan dengan kebutuhan serta kenyamanan individu. Sebaiknya konsultasikan
+                dengan profesional kesehatan atau ahli gizi untuk merancang program diet dan olahraga yang sesuai dengan kondisi tubuh dan tujuan penurunan 
+                berat badan Anda.</p>
+    
+                <b><i>Ditulis oleh Annisa Hapsari</b></i>
+                <p><b><i>Ditinjau secara medis oleh dr. Andreas Wilson Setiawan</b></i>
+                <p><b><i>General Practitioner, Rumah Sakit Universitas Indonesia (RSUI)</b></i>
             </div>
         </div>
-    
-        <div class="modal" id="myModalFood">
-            <span class="close" onclick="closeModal('myModalFood')">×</span>
-            <img class="modal-content" id="modalImage1">
-            <div id="caption1"></div>
-        </div>
-        <script src="main.js"></script>
+
+        <h2>Food Recommendations</h2>
+        <div class="image-slider">
+            <div class="image-slider1">
+                <div class="slides1">
+                    <img src="buah.jpg" onclick="openModal('buah.jpg', 'BUAH-BUAHAN', 'Sudah bukan rahasia umum lagi bila buah-buahan menawarkan segudang manfaat bagi kesehatan, termasuk membantu menurunkan berat badan. Beberapa buah penurun berat badan yang bisa Anda coba adalah apel dan pir. Makan buah apel atau pir di antara waktu makan atau tepat sebelum makan ternyata bisa menekan rasa lapar. Hal ini dikarenakan apel mengandung pektin, yaitu serat larut air yang membuat tubuh kenyang lebih lama. Sementara itu, buah pir mempunyai serat yang cukup untuk melancarkan pencernaan dan mengirimkan sinyal ke otak bahwa Anda telah makan sesuatu. Meski begitu, orang yang tengah menjalani diet rendah karbohidrat atau memiliki alergi terhadap buah tertentu mungkin perlu menghindari buah-buahan.')">
+                    <img src="kentang.jpg" onclick="openModal('kentang.jpg', 'KENTANG REBUS', 'Dikenal sebagai pengganti nasi, kentang ternyata juga bisa menjadi salah satu makanan penurun berat badan. Kentang merupakan salah satu sumber karbohidrat yang bisa dimanfaatkan saat diet. Bahkan, kentang untuk diet juga pernah dinobatkan menjadi peringkat satu dalam satiety index. Satiety index yaitu indeks yang menjadi indikator seberapa besar makanan tersebut membuat Anda kenyang. Alih-alih mengonsumsi kentang goreng, cobalah merebus kentang dan menunggunya hingga dingin. Pasalnya, kentang rebus yang dingin disebut memiliki pati resisten yang lebih banyak hingga mampu membantu Anda menurunkan berat badan.')">
+                    <img src="alpuket.jpg" onclick="openModal('alpuket.jpg', 'ALPUKAT', 'Berbeda dengan buah-buahan lainnya, buah alpukat mengandung lemak sehat dengan karbohidrat yang rendah. Pasalnya, buah berwarna hijau ini mengandung asam oleat tak jenuh tunggal, yaitu jenis lemak yang dapat dijumpai pada minyak zaitun. Di samping itu, kandungan air dan serat dalam alpukat juga dapat membuat Anda merasa kenyang lebih lama. Hal ini telah dibuktikan melalui penelitian dalam Journal Nutrition. Penelitian tersebut melaporkan, penambahan setengah buah alpukat saat makan siang dapat meningkatkan rasa kenyang sebanyak 26 persen. Buah ini juga mengurangi keinginan makan sebesar 40 persen selama 3 jam. ')">
+                    <img src="daging.jpeg" onclick="openModal('daging.jpeg', 'DAGING RENDAH LEMAK', 'Alih-alih mengonsumsi makanan berlemak tinggi, Anda bisa menggantinya dengan asupan protein rendah lemak, seperti dada ayam dan ikan. Berkat kandungan proteinnya yang tinggi, makanan penurun berat badan ini membantu memenuhi kebutuhan protein harian Anda saat diet sehat. Hal tersebut dibuktikan melalui penelitian yang dimuat dalam jurnal Obesity (Silver Spring, Md.). Penelitian tersebut menunjukkan bahwa meningkatkan asupan protein hingga 25% dari kalori harian dapat mengurangi keinginan untuk ngemil hingga 60%. Berkurangnya keinginan tersebut berkontribusi besar terhadap penurunan berat badan. Walaupun demikian, selalu konsumsi daging dalam jumlah sewajarnya. Terlalu banyak mengonsumsi daging, terutama daging merah, tentu tidak bagi kesehatan Anda dan bisa meningkatkan risiko berbagai penyakit.')">
+                    <img src="salmon.jpg" onclick="openModal('salmon.jpg', 'SALMON', 'Manfaat ikan didapat dari asupan protein rendah lemak di dalamnya. Salah satu jenis ikan yang bisa Anda manfaatkan sebagai makanan penurun berat badan adalah salmon. Sama seperti makanan berprotein tinggi lainnya, ikan salmon membantu mengatur hormon yang dapat mengendalikan nafsu makan. Manfaat dari salmon ini juga membantu membuat Anda merasa kenyang. Bahkan, studi yang dimuat dalam PLos One mengungkapkan, kandungan lemak omega-3 dalam salmon membantu mengurangi lemak perut. Temuan ini dilaporkan pada para peserta yang mengalami kelebihan berat badan. Tidak mengherankan bila ikan yang mengandung kalori rendah ini begitu digemari oleh mereka yang tengah menjalani diet. ')">
+                    <img src="kacang.jpg" onclick="openModal('kacang.jpg', 'KACANG-KACANGAN', 'Bagi Anda yang doyan ngemil di tengah program diet yang dijalani, kacang-kacangan mungkin bisa jadi solusi yang tepat. Banyak orang yang menganggap bahwa kandungan lemak dalam kacang bisa menggemukkan, tetapi faktanya tidak demikian. Salah satu jenis kacang yang bisa Anda jadikan sebagai makanan penurun berat badan adalah almond. Almond merupakan jenis kacang yang mengandung lemak tak jenuh tunggal yang bisa membuat Anda merasa kenyang. Kabar baiknya, almond juga menawarkan antioksidan, vitamin E, mangan, dan protein yang dibutuhkan tubuh. Untuk hasil yang maksimal, konsumsi kacang almond sebelum berolahraga agar tubuh dapat membakar lebih banyak karbohidrat selama latihan. ')">
+                    <img src="sayur.jpg" onclick="openModal('sayur.jpg', 'SAYURAN HIJAU', 'Memperbanyak konsumsi sayuran merupakan cara menurunkan berat badan yang paling aman dan salah satunya adalah sayuran hijau. Sayuran hijau seperti kangkung, bayam, dan brokoli mengandung kalori dan karbohidrat yang rendah. Namun, kandungan serat pada sayuran ini sangat tinggi sehingga membuat Anda kenyang lebih lama. Itu sebabnya, Anda bisa memenuhi piring makan dengan beragam sayuran hijau tanpa takut gemuk. Sayuran berdaun hijau juga kaya akan mineral kalsium yang telah terbukti membantu proses pembakaran lemak tubuh.')">
+                    <img src="telur.jpg" onclick="openModal('telur.jpg', 'TELUR', 'Salah satu makanan penurun berat badan yang sudah tidak asing lagi yaitu telur. Bagaimana tidak, telur mengandung protein tinggi, lemak sehat, dan membuat Anda merasa kenyang lebih lama dengan jumlah kalori yang relatif rendah. Menariknya lagi, telur termasuk padat nutrisi, sehingga Anda tak perlu takut kekurangan gizi ketika menjalani diet. Meski begitu, usahakan tidak mengonsumsi telur terlalu banyak untuk menghindari lonjakan kolesterol.')">
+                    <img src="yogurt.jpg" onclick="openModal('yogurt.jpg', 'YOGURT', 'Kandungan probiotik yang tinggi dalam yogurt memang dikenal dapat meningkatkan kerja usus. Usus yang sehat membantu melindungi tubuh dari peradangan dan resistensi leptin, yaitu kondisi yang memicu hormon utama penyebab obesitas. Maka dari itu, yogurt sering dimasukkan ke dalam menu diet menurunkan berat badan. Selain probiotik, yogurt juga memiliki protein yang tinggi, terutama pada greek yoghurt dan kandungan asam di dalamnya membuat Anda kenyang lebih lama. Cobalah memilih yogurt berlemak tinggi untuk menurunkan risiko obesitas dan diabetes tipe 2. Sementara itu, yogurt rendah lemak biasanya mengandung gula yang banyak, sehingga sebaiknya hindari jenis yogurt ini ketika menjalani diet. ')">
+                    <img src="gandum.jpg" onclick="openModal('gandum.jpg', 'GANDUM UTUH', 'Beberapa jenis biji-bijian serealia memang disebut kurang baik bagi orang yang menjalani program menurunkan berat badan. Untungnya, ada sejumlah jenis gandum utuh yang bisa dijadikan sebagai makanan penurun berat badan. Biji-bijian ini kaya akan serat dan mengandung protein yang cukup menjalani aktivitas harian. Salah satu jenis gandum utuh yang bisa Anda manfaatkan yakni oat. Oat merupakan biji-bijian serealia yang kaya akan beta-glukan, yaitu serat larut yang terbukti meningkatkan perasaan kenyang. Selain perasaan kenyang, jenis serat larut ini berperan penting dalam proses metabolisme. Tidak hanya oat, Anda dapat memanfaatkan gandum utuh lainnya, terutama beras cokelat dan quinoa guna menurunkan berat badan.')">
+                    <img src="biji chia.jpg" onclick="openModal('nbiji chia.jpg', 'BIJI CHIA', 'Para penggemar overnight oatmeal mungkin sudah tidak asing lagi dengan biji chia (chia seed). Makanan super penangkal berbagai penyakit ini ternyata sering dimasukkan ke dalam diet penurun berat badan. Bagaimana bisa? Chia seed kaya protein tinggi dengan kalori rendah. Protein termasuk nutrisi penting yang harus dikonsumsi saat menurunkan berat badan. Hal ini dikarenakan makan makanan berprotein tinggi membantu mengurangi nafsu makan dan keinginan untuk ngemil. Selain itu, kandungan serat pada biji chia juga membantu tubuh merasa kenyang lebih lama. Namun, penelitian lebih lanjut dibutuhkan untuk mengupas manfaat biji chia (chia seed) terhadap angka timbangan Anda. ')">   
+               </div>
+            </div>
+
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-image">
+                    <img class="modal-content" id="imgModal">
+                </div>
+                <div class="modal-description">
+                    <h3 id="titleModal"></h3>
+                    <p id="descriptionModal"></p>
+                </div>
+            </div>
+
+            <div class="text_food">
+                <p>Makanan memainkan peran penting dalam mencapai tujuan penurunan berat badan dan mencapai tubuh yang lebih ramping. Keunggulan
+                makanan ini terletak pada kemampuannya membantu tubuh merasa kenyang lebih lama, memberikan Anda kontrol lebih besar terhadap
+                asupan kalori. Dalam mencapai berat badan yang diinginkan, rutin berolahraga merupakan langkah awal yang penting, namun, kesuksesan
+                juga bergantung pada pola makan sehat. Pemilihan makanan yang tepat merupakan kunci dalam menciptakan pola makan sehat yang
+                mendukung program penurunan berat badan. Daftar makanan penurun berat badan yang disajikan di samping memberikan opsi bervariasi
+                baik untuk kesehatan. Dalam menjalani program diet, disarankan untuk yang selalu berdiskusi dengan dokter atau ahli gizi. Konsultasi
+                ini membantu memastikan bahwa makanan yang Anda pilih sesuai dengan kebutuhan kesehatan dan kondisi tubuh Anda. Terdapat gambar-gambar
+                yang akan direkomendasikan sebagai panduan visual terkait makanan-makanan tersebut, sehingga dapat mempermudah pemahaman dan
+                penerapan dalam program penurunan berat badan Anda. Oleh karena itu, kombinasi antara pola makan sehat, olahraga rutin, dan
+                konsultasi dengan tenaga medis dapat menjadi langkah cerdas dalam mencapai tujuan penurunan berat badan yang efektif dan berkelanjutan.</p>
         
+                <b><i>Ditulis oleh: Widya Citra Andini</b></i>
+                <p><b><i>Ditinjau secara medis oleh: dr. Patricia Lukas Goentoro</b></i>
+                <p><b><i>General Practitioner, Rumah Sakit Universitas Indonesia (RSUI)</b></i>
+            </div>
+        </div>        
     </div>
+
+    <div class="footer">
+        <h4><div id="logo"><button id="calendar-btn">📅</button>Gurlsgoals</div></h4>
+        <div class="text_footer">
+            <p><b>Tidak ada yang bisa mengubah hidupmu</b></p>
+            <p><b>Kecuali dirimu sendiri</b></p>
+            <p><b>Diet sehat? Gurlsgoals solusinya!</b></p>
+        </div>
+
+        <nav class="logo">
+            <a href="https://instagram.com/resepmakanandiet?igshid=MzMyNGUyNmU2YQ=="><img src="ig.png" alt="Instagram" class="icon"></a>
+            <a href="https://www.youtube.com/@BodyFitByBagus"><img src="yt.png" alt="Youtube" class="icon"></a>
+            <a href="https://web.facebook.com/?locale=id_ID&_rdc=1&_rdr"><img src="fb.png" alt="Facebook" class="icon"></a>
+            <a href="https://web.facebook.com/?locale=id_ID&_rdc=1&_rdr"><img src="tw.png" alt="Twitter" class="icon"></a>
+            <a href="https://www.tiktok.com/@dietsehatt"><img src="tt.png" alt="TikTok" class="icon"></a>
+            <a href="https://hellosehat.com/kebugaran/"><img src="google.png" alt="Google" class="icon"></a>
+        </nav>
+    </div>
+
+    <script src="main.js"></script>
     
 
 </body>

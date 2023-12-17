@@ -1,22 +1,3 @@
-/*Dari log-in pindah ke Halaman Home*/
-function alihkanKeHome() {
-    window.location.href = "home.html";
-}
-
-/*Dari Home Pindah ke halaman Kalkulator BMI*/
-function goToBMIPage() {
-    window.location.href = "BMI.html";
-}
-
-function goToPage(page) {
-    window.location.href = page;
-}
-
-/*Dari logout akan keluar ke browser yang digunakan*/
-document.getElementById("keluar").addEventListener("click", function() {
-    window.history.back(); 
-});
-
 /*Agar gambar bergulir*/
 let currentSlide = 0;
 let currentSlide1 = 0;
@@ -71,12 +52,16 @@ function openModal(imageSrc, title, description) {
     descriptionElement.innerHTML = description;
 
     modal.style.display = "block";
+
+    document.getElementById("navbar").style.display = "none";
 }
 
 function closeModal() {
     var modal = document.getElementById("modal");
     modal.style.display = "none";
     document.body.style.overflow = 'auto';
+
+    document.getElementById("navbar").style.display = "flex";
 }
 
 window.onclick = function (event) {
@@ -103,4 +88,22 @@ function calculateBMI() {
     resultElement.innerHTML = 'Hasil Body Mass Index : ' + bmi.toFixed(2);
   }
 
+/*Dari log-in pindah ke Halaman Home*/
+function alihkanKeHome() {
+    window.location.href = "home.html";
+}
 
+/*Dari Home Pindah ke halaman Kalkulator BMI*/
+function goToBMIPage() {
+    window.location.href = "BMI.html";
+}
+
+/*Dari home pindah ke about, calender, logout*/
+function goToPage(page) {
+    window.location.href = page;
+}
+
+/*Dari logout akan keluar ke browser yang digunakan untuk membuka websitenya*/
+document.getElementById("keluar").addEventListener("click", function() {
+    window.history.back(); 
+});

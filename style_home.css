@@ -203,6 +203,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #FEE9F2;
+    padding: 40px;
 }
 
 #exerciseTitle, #foodTitle {
@@ -252,10 +253,11 @@ body {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: lightcoral;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    margin-right: 90px;
 }
 
 .close:hover,

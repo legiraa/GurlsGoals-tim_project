@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Calendar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f0f0; /* Soft pink background */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #ff69b4; /* Deep pink text color */
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #ff69b4; /* Deep pink header background */
+            color: white;
+        }
+
+        td {
+            position: relative;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 8px;
+            margin-right: 5px;
+        }
+
+        input[type="button"] {
+            padding: 8px;
+            cursor: pointer;
+            background-color: #ff69b4; /* Deep pink button background */
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Diet Calendar</h2>
+
+<table id="calendar">
+    <thead>
+    <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Calendar content will be added dynamically with JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    // Function to add a task to a specific date
+    function addTask(date, task, isChecked) {
+        var taskList = document.getElementById("taskList_" + date);
+
+        var taskItem = document.createElement("li");
+        taskItem.innerHTML = `
+            <input type="checkbox" ${isChecked ? "checked" : ""}>
+            <span>${task}</span>
+        `;
+
+        taskList.appendChild(taskItem);
+    }
+
+    // Function to generate tasks for a specific date
+    function generateTasks(date, tasks) {
+        tasks.forEach(function (task) {
+            addTask(date, task, false);
+        });
+    }
+
+    // Function to remove a task from the list
+    function removeTask(date, button) {
+        var taskItem = button.parentElement;
+        taskItem.remove();
+        updateLocalStorage(date);
+    }
+
+    // Function to update local storage when checkbox is checked/unchecked
+    function updateLocalStorage(date) {
+        var taskList = document.getElementById("taskList_" + date);
+        var checkboxes = taskList.querySelectorAll("input[type='checkbox']");
+        var isCheckedArray = Array.from(checkboxes).map(checkbox => checkbox.checked);
+
+        localStorage.setItem(date, JSON.stringify(isCheckedArray));
+    }
+
+    // Function to generate the calendar dynamically
+    function generateCalendar() {
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+        var daysInMonth = new Date(year, month + 1, 0).getDate();
+        var firstDayOfMonth = new Date(year, month, 1).getDay();
+
+        var tableBody = document.getElementById("calendar").getElementsByTagName('tbody')[0];
+        var dayCounter = 1;
+
+        for (var i = 0; i < 6; i++) {
+            var row = tableBody.insertRow();
+
+            for (var j = 0; j < 7; j++) {
+                var cell = row.insertCell();
+
+                if (i === 0 && j < firstDayOfMonth) {
+                    // Leave cells empty before the first day of the month
+                    continue;
+                }
+
+                if (dayCounter <= daysInMonth) {
+                    var date = year + "-" + (month + 1).toString().padStart(2, '0') + "-" + dayCounter.toString().padStart(2, '0');
+                    cell.textContent = dayCounter;
+                    cell.id = "cell" + date;
+
+                    // Retrieve checked state from local storage
+                    var isCheckedArray = JSON.parse(localStorage.getItem(date)) || [];
+
+                    var taskList = document.createElement("ul");
+                    taskList.id = "taskList_" + date;
+                    cell.appendChild(taskList);
+
+                    // Example: Generate tasks for a specific date
+                    if (date === "2023-12-01") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-02") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-03") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-04") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-05") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-06") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-07") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-08") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-09") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-10") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-11") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-12") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-13") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-14") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-15") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-16") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-17") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-18") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-19") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-20") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-21") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-22") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-23") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-24") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-25") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-26") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-27") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-28") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-29") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+
+                    if (date === "2023-12-30") {
+                        generateTasks(date, ["bakso", "tahu", "tidur"]);
+                    }
+
+                    if (date === "2023-12-31") {
+                        generateTasks(date, ["bakso", "tahu", "turu"]);
+                    }
+                    cell.addEventListener("click", function () {
+                        updateLocalStorage(this.id.substring(4));
+                    });
+
+                    dayCounter++;
+                }
+            }
+        }
+    }
+
+    // Call the function to generate the calendar on page load
+    window.onload = function () {
+        generateCalendar();
+    };
+</script>
+
+</body>
+</html>

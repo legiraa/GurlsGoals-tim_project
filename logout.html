@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+    <title>Log-Out</title>
+</head>
+
+<style>
+    body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FEE9F2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        background-color: #f8f8f8;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0);
+        overflow: hidden;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 50px;
+    }
+
+    #calendar-btn {
+        font-size: 25px;
+        position: relative;
+        margin-right: 5px;
+        border: none; 
+        background-color: transparent; 
+    }
+
+    .pilihan{
+        margin-right: 50px;
+        margin-top: 5px;
+    }
+
+    .pilihan button{
+        margin-right: 5px;
+        border: none;
+        background-color: transparent;
+        padding: 8px 12px; 
+        border-radius: 5px; 
+        color: black; 
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .pilihan button:active {
+        background-color: #ffccd1; 
+    }
+
+    #logout {
+        background-color: #F77BB6; 
+        padding: 8px 12px;
+        border: none;
+        color: white; 
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    #logout:active {
+        background-color: #ffccd1; 
+    }
+
+    .button {
+    text-align: center;
+    }
+
+    .user-welcome {
+    text-align: center;
+    }
+
+    .user-welcome img {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 10px;
+        border-radius: 50%;
+    }
+    .teks {
+        color: #333; 
+        text-align: justify;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        margin-bottom: 15px;
+        background-color: #ffccd1;
+        padding: 10px;
+        border-radius: 10px; 
+    }
+
+    .teks p, h1{
+        margin:10px;
+    }
+
+    .teks h1{
+        text-align: center;
+    }
+
+    .teks button{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #FEE9F2; 
+        color: lightcoral; 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .teks button:active {
+      background-color: #ffccd1; 
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <div id="logo"><button id="calendar-btn">📅</button>Gurlsgoals</div>
+        <div class="pilihan">
+            <button id="home-btn" onclick="goToPage('home.html')"><b>Home</b></button>
+            <button id="about-btn" onclick="goToPage('about.html')"><b>About</b></button>
+            <button id="my-calendar-btn" onclick="goToPage('calendar.html')"><b>My Calendar</b></button>
+            <button id="logout" onclick="goToPage('logout.html')"><b>Log Out</b></button>
+        </div>
+    </nav>
+
+    <div class="user-welcome">
+        <img src="Dadah.png" alt="User Image">
+        <div class="teks">
+            <h1>See you at another time</h1>
+            <p>Terima kasih telah mengikuti website kami! Kami ingin menyampaikan apresiasi kepada kamu yang telah memiliki 
+                keinginan untuk melakukan diet dan yang pada akhirnya telah berjuang bersama dengan website ini. Bagi kamu yang sedang berjuang,
+                ingat website ini akan akan selalu ada untuk membantumu, dan bagi kamu yang sudah berhasil selama 30 hari kebelakang ini,
+                Selamat atas kerja kerasnya! Kamu luar biasa. 
+            </p>
+            <button id="keluar"><b>KELUAR</b></button>
+        </div>
+    </div>
+</body>
+</html>

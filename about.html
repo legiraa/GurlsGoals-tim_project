@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+    <title>About</title>
+</head>
+
+<style>
+    body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FEE9F2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        background-color: #f8f8f8;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0);
+        overflow: hidden;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 50px;
+    }
+
+    #calendar-btn {
+        font-size: 25px;
+        position: relative;
+        margin-right: 5px;
+        border: none; 
+        background-color: transparent; 
+    }
+
+    .pilihan{
+        margin-right: 50px;
+        margin-top: 5px;
+    }
+
+    .pilihan button{
+        margin-right: 5px;
+        border: none;
+        background-color: transparent;
+        padding: 8px 12px; 
+        border-radius: 5px; 
+        color: black; 
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .pilihan button:active {
+        background-color: #ffccd1; 
+    }
+
+    #about-btn {
+        background-color: #F77BB6; 
+        padding: 8px 12px;
+        border: none;
+        color: white; 
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    #about-btn:active {
+        background-color: #ffccd1; 
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        position: relative;
+    }
+
+    .long-image {
+        width: 50vw;
+        max-height: 50vw;
+        object-fit: contain;
+        margin-right: 45vw;
+        margin-top: 7%;
+    }
+
+    .text {
+        position: absolute;
+        left: 43vw;
+        width: 45vw;
+        height: 50vw;
+        top: 0;
+        background-color: white;
+        padding: 5px;
+    }
+
+    .text_dalam{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 75%;
+        text-align: justify;
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <div id="logo"><button id="calendar-btn">📅</button>Gurlsgoals</div>
+        <div class="pilihan">
+            <button id="home-btn" onclick="goToPage('home.html')"><b>Home</b></button>
+            <button id="about-btn" onclick="goToPage('about.html')"><b>About</b></button>
+            <button id="my-calendar-btn" onclick="goToPage('calendar.html')"><b>My Calendar</b></button>
+            <button id="logout" onclick="goToPage('logout.html')"><b>Log Out</b></button>
+        </div>
+    </nav>
+
+    <div class="content">
+        <img class="long-image" src="AB.png" alt="long image">
+        <div class="text">
+            <div class="text_dalam">
+                <h1 style="color: #F77BB6;">Tentang GurlsGoals - Program Diet 30 Hari</h1>
+                <p>Program diet GurlsGoals difokuskan pada kesehatan dan kebugaran perempuan. Kami memahami bahwa setiap perempuan 
+                    memiliki kebutuhan uniknya sendiri, oleh karena itu, kami menyusun rekomendasi makanan dan olahraga yang disesuaikan 
+                    untuk membantu kamu mencapai hasil terbaik.</p>
+                <p style="color: #F77BB6; font-size: 15px;"><b>Apa yang Kami Tawarkan ?</p></b>
+                <p><b>1. Rekomendasi Bahan Makanan</p></b>
+                <P>   Kami menyediakan penjelasan mendalam tentang berbagai bahan makanan yang sesuai untuk program dietmu. 
+                    Temukan manfaat kesehatan, informasi gizi, dan resep lezat yang dapat membantu kamu mencapai tujuan berat badan.</P>
+                <p><b>2. Rekomendasi Olahraga yang Beragam</p></b>
+                <p>   Rencana olahraga kami mencakup berbagai jenis aktivitas fisik, mulai dari latihan kardio hingga latihan kekuatan.</p>
+                <P><b>3. Kalender 30 Hari yang Informatif</P></b>
+                <p>   Dapatkan kalender harian yang tidak hanya memberikan daftar makanan dan olahraga, tetapi juga penjelasan rinci 
+                    tentang setiap bahan makanan dan jenis olahraga yang direkomendasikan. Ini membantu kamu memahami alasan di balik setiap rekomendasi.</p>
+                <p style="color: #F77BB6; font-size: 15px;"><b>Bagaimana Cara Menggunakan Kalender?</b>
+                <p><b>1. Pilih Hari di Kalender</p></b>
+                <p>   Pilih hari yang ingin kamu lihat di kalender. Setiap hari dilengkapi dengan informasi tentang bahan makanan
+                    dan olahraga yang direkomendasikan.</p>
+                <p><b>2. Eksplorasi Informasi Detail</p></b>
+                <p>   Dapatkan penjelasan rinci tentang setiap bahan makanan dan jenis olahraga. Temukan informasi nutrisi,
+                    manfaat, dan panduan pelaksanaan yang dapat membantu kamu membuat keputusan yang informasional.</p>
+                <p><b>3. Variasi dan Kreativitas</p></b>
+                <p>   Kami mendorong variasi dalam makanan dan olahraga. Temukan cara kreatif untuk memasukkan bahan makanan 
+                    sehat dan jenis olahraga yang kamu nikmati ke dalam rutinitas harianmu.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

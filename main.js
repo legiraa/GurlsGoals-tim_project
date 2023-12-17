@@ -1,7 +1,21 @@
-/*Dari log-in pindah ke Halaman Jome*/
+/*Dari log-in pindah ke Halaman Home*/
 function alihkanKeHome() {
     window.location.href = "home.html";
 }
+
+/*Dari Home Pindah ke halaman Kalkulator BMI*/
+function goToBMIPage() {
+    window.location.href = "BMI.html";
+}
+
+function goToPage(page) {
+    window.location.href = page;
+}
+
+/*Dari logout akan keluar ke browser yang digunakan*/
+document.getElementById("keluar").addEventListener("click", function() {
+    window.history.back(); 
+});
 
 /*Agar gambar bergulir*/
 let currentSlide = 0;
@@ -71,11 +85,6 @@ window.onclick = function (event) {
     }
 };
 
-/*Dari Home Pindah ke halaman Kalkulator BMI*/
-function goToBMIPage() {
-    window.location.href = "BMI.html";
-}
-
 /*Calculator BMI*/
 function calculateBMI() {
     
@@ -93,7 +102,5 @@ function calculateBMI() {
     var resultElement = document.getElementById('result');
     resultElement.innerHTML = 'Hasil Body Mass Index : ' + bmi.toFixed(2);
   }
-  
-
 
 

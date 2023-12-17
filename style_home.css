@@ -157,14 +157,14 @@ body {
 }
 
 .page3 h2 {
-   font-size: 20px;
+   font-size: 25px;
     text-align: center;
     margin-bottom: 4%;
     margin-top: 5%;
 }
 
 .page3 h3 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     margin-bottom: 4%;
 }
@@ -283,6 +283,33 @@ body {
     font-size: 15px;
 }
 
+/*page4*/
+.page4 {
+    background-color: #FED8DF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.page4 h5 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.page4 p {
+    font-size: 17px;
+    margin: 0;
+}
+
+.a5-image {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    margin-top: 15px;
+}
 
 /*Footer*/
 .footer{
@@ -292,7 +319,6 @@ body {
     width: 100%; 
     transform: translateX(-50%);
     color: white;
-    margin-top: 50px;
 }
 
 h4{

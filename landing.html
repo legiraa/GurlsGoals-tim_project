@@ -5,10 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="style_landing.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
     <title>Landing</title>
 </head>
+
+<style>
+    body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        background-color: #f8f8f8;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 50px;
+    }
+
+    #calendar-btn {
+        font-size: 25px;
+        position: relative;
+        margin-right: 5px;
+        border: none; 
+        background-color: transparent; 
+    }
+
+    .pilihan button a {
+        text-decoration: none; 
+        font-weight: bold; 
+        background-color: #F77BB6; 
+        padding: 8px 12px;
+        color: white; 
+        border-radius: 5px; 
+        transition: background-color 0.3s ease;
+    }
+
+    #login-btn, #signup-btn {
+        cursor: pointer;
+        border: none;
+        background-color: transparent; 
+        cursor: pointer;
+        font-size: 15px;
+        
+    }
+
+    #login-btn{
+        margin-right: 5px;
+        padding: 8px 12px; 
+    }
+
+    #signup-btn{
+        margin-right: 65px;
+        padding: 8px 12px; 
+    }
+
+    .pilihan button a:active {
+        background-color: #ffccd1; 
+    }
+
+    .page_landing {
+        color: black;
+        height: 100vh;
+        background-image: url('bg_landing.png');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    .content-container {
+        max-width: 700px; 
+        margin-right: auto;
+        margin-left: 60px; 
+        padding: 0px 20px; 
+        text-align: left;
+        font-size: 18px;
+    }
+
+    #description {
+        margin-top: 20px; 
+        text-align: justify;
+        font-size: 17px;
+    }
+</style>
+
 <body>
     <nav class="navbar">
         <div id="logo"><button id="calendar-btn">📅</button>Gurlsgoals</div>

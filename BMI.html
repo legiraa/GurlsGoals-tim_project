@@ -13,30 +13,42 @@
 <style>
   body {
       font-family: "Montserrat", sans-serif;
-      display: flex;
-      flex-direction: column; 
-      align-items: center; 
-      height: 100vh;
       margin: 0;
       padding: 0;
-      background-image: url('bg_bmi.png');
-      background-position: center center; 
-      background-size: cover;
+      background-color: #FEE9F2;
   }
-    
+  
+    .page1, .page2{
+      height: 100vh;
+      background-image: url('BMI_page1.png');
+      background-position: center;
+      background-size: cover;
+      background-position: initial;
+      display: flex;
+      align-items: center;
+    }
+
+    .page2{
+      background-image: url('BMI_page2.png');
+    }
+
   .calculator {
       text-align: center;
-      margin-top: 18%;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 30px 40px;
+      margin-left: 20vw;
+      margin-right: 20vw;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, .2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+      backdrop-filter: blur(20px);
   }
 
   .calculator h2{
       text-align: center;
       margin-top: 10px;
       margin-bottom: 10px;
-      margin-left: 25%;
-      margin-right: 25%;
+      margin-left: 15%;
+      margin-right: 15%;
       font-size: 20px;
       font-weight: normal;
   }
@@ -81,83 +93,92 @@
   }
 
   .table-container {
-    text-align: center;
-    margin-top: 33%;
+      text-align: center;
+      padding: 70px 70px;
+      margin-left: 20vw;
+      margin-right: 20vw;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, .2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+      backdrop-filter: blur(20px);
   }
 
   #bmi-table {
-    width: 50vw;
-    margin: 0 auto;
-    margin-bottom: 25%;
-    border-collapse: collapse;
+      width: 50vw;
+      margin: 0 auto;
+      border-collapse: collapse;
   }
 
   #bmi-table caption {
-    font-size: 30px ;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
+      font-size: 33px ;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
   }
 
   #bmi-table th, #bmi-table td {
-    border: 2px solid white;
-    padding: 8px;
-    text-align: left;
-    text-align: center;
+      border: 2px solid pink;
+      padding: 8px;
+      text-align: left;
+      text-align: center;
+      font-size: 20px;
   }
 
   #bmi-table th {
-    background-color: #F77BB6;
-    color: white;
-    font-weight: bold;
+      background-color: #F77BB6;
+      color: white;
+      font-weight: bold;
   }
 </style>
 
 <body>
-<div class="calculator">
-    <h1>Body Mass Index</h1>
-    <h2>Body Mass Index (BMI) atau indeks massa tubuh  digunakan untuk mengetahui apakah berat badan termasuk dalam kategori normal, berlebih, atau justru kurang. Yukk cekk... </h2>
-       
-    <div class="TB">
-        <input type="number" id="weight" placeholder="Berat (kg)" required>
-        <p><input type="number" id="height" placeholder="Tinggi (cm)" required></p>
+<div class="page1"> 
+  <div class="calculator">
+      <h1>Body Mass Index</h1>
+      <h2>Body Mass Index (BMI) atau indeks massa tubuh  digunakan untuk mengetahui apakah berat badan termasuk dalam kategori normal, berlebih, atau justru kurang. Yukk cekk... </h2>
+        
+      <div class="TB">
+          <input type="number" id="weight" placeholder="Berat (kg)" required>
+          <p><input type="number" id="height" placeholder="Tinggi (cm)" required></p>
 
-        <button onclick="calculateBMI()">HITUNG</button>
-    </div>
-    <button id="result"></button>
+          <button onclick="calculateBMI()">HITUNG</button>
+      </div>
+      <button id="result"></button>
+  </div>
+</div> 
+
+<div class="page2">
+  <div class="table-container">
+      <table id="bmi-table">
+        <caption>Golongan Berat Badan</caption>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>BMI Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Underweight (Berat Badan Kurang)</td>
+            <td>&lt; 18.5</td>
+          </tr>
+          <tr>
+            <td>Normal Weight (Ideal)</td>
+            <td>18.5 - 24.9</td>
+          </tr>
+          <tr>
+            <td>Overweight (Agak Gemuk)</td>
+            <td>25 - 29.9</td>
+          </tr>
+          <tr>
+            <td>Obesity (Terlalu Gemuk)</td>
+            <td>&ge; 30</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </div>
 
 <script src="main.js"></script>
-
-<div class="table-container">
-    <table id="bmi-table">
-      <caption>Golongan Berat Badan</caption>
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>BMI Range</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Underweight (Berat Badan Kurang)</td>
-          <td>&lt; 18.5</td>
-        </tr>
-        <tr>
-          <td>Normal Weight (Ideal)</td>
-          <td>18.5 - 24.9</td>
-        </tr>
-        <tr>
-          <td>Overweight (Agak Gemuk)</td>
-          <td>25 - 29.9</td>
-        </tr>
-        <tr>
-          <td>Obesity (Terlalu Gemuk)</td>
-          <td>&ge; 30</td>
-        </tr>
-      </tbody>
-    </table>
-</div>
-
 </body>
 </html>

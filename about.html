@@ -21,7 +21,7 @@
         align-items: center;
     }
 
-    .navbar {
+    .navbar { 
         background-color: #f8f8f8;
         padding: 15px;
         display: flex;
@@ -49,21 +49,30 @@
     .pilihan{
         margin-right: 50px;
         margin-top: 5px;
+        text-decoration : none;
     }
 
     .pilihan button{
         margin-right: 5px;
         border: none;
         background-color: transparent;
-        padding: 8px 12px; 
         border-radius: 5px; 
-        color: black; 
         cursor: pointer;
         font-size: 15px;
         transition: background-color 0.3s ease;
     }
-
+    
+    .pilihan button a{
+        padding: 8px 10px; 
+        color: black; 
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
     .pilihan button:active {
+        background-color: #ffccd1; 
+    }
+    .pilihan button a:active {
         background-color: #ffccd1; 
     }
 
@@ -110,7 +119,7 @@
     .text_dalam{
         margin-left: 50px;
         margin-right: 50px;
-        margin-top: 20px;
+        margin-top: 50px;
         margin-bottom: 20px;
         font-size: 75%;
         text-align: justify;
@@ -121,10 +130,10 @@
     <nav class="navbar">
         <div id="logo"><button id="calendar-btn">📅</button>Gurlsgoals</div>
         <div class="pilihan">
-            <button id="home-btn" onclick="goToPage('home.html')"><b>Home</b></button>
-            <button id="about-btn" onclick="goToPage('about.html')"><b>About</b></button>
-            <button id="my-calendar-btn" onclick="goToPage('calendar.html')"><b>My Calendar</b></button>
-            <button id="logout" onclick="goToPage('landing.html')"><b>Log Out</b></button>
+            <button id="home-btn" onclick="goToPage('home.html')"><a id="home-btn" href="home.html">Home</a></button>
+            <button id="about-btn" onclick="goToPage('about.html')"><a id="about-btn" href="about.html">About</a></button>
+            <button id="my-calendar-btn" onclick="goToPage('calendar.html')"><a href="pilihan_kalender.html">My Calendar</a></button>
+            <button id="logout" onclick="goToPage('landing.html')"><a href="landing.html">Log Out</a></button>
         </div>
     </nav>
 
@@ -132,29 +141,28 @@
         <img class="long-image" src="AB.png" alt="long image">
         <div class="text">
             <div class="text_dalam">
-                <h1 style="color: #F77BB6;">Tentang GurlsGoals - Program Diet 30 Hari</h1>
-                <p>Program diet GurlsGoals difokuskan pada kesehatan dan kebugaran perempuan. Kami memahami bahwa setiap perempuan 
-                    memiliki kebutuhan uniknya sendiri, oleh karena itu, kami menyusun rekomendasi makanan dan olahraga yang disesuaikan 
-                    untuk membantu kamu mencapai hasil terbaik.</p>
-                <p style="color: #F77BB6; font-size: 15px;"><b>Apa yang Kami Tawarkan ?</p></b>
-                <p><b>1. Rekomendasi Bahan Makanan</p></b>
-                <P>   Kami menyediakan penjelasan mendalam tentang berbagai bahan makanan yang sesuai untuk program dietmu. 
-                    Temukan manfaat kesehatan, informasi gizi, dan resep lezat yang dapat membantu kamu mencapai tujuan berat badan.</P>
-                <p><b>2. Rekomendasi Olahraga yang Beragam</p></b>
-                <p>   Rencana olahraga kami mencakup berbagai jenis aktivitas fisik, mulai dari latihan kardio hingga latihan kekuatan.</p>
-                <P><b>3. Kalender 30 Hari yang Informatif</P></b>
-                <p>   Dapatkan kalender harian yang tidak hanya memberikan daftar makanan dan olahraga, tetapi juga penjelasan rinci 
-                    tentang setiap bahan makanan dan jenis olahraga yang direkomendasikan. Ini membantu kamu memahami alasan di balik setiap rekomendasi.</p>
-                <p style="color: #F77BB6; font-size: 15px;"><b>Bagaimana Cara Menggunakan Kalender?</b>
-                <p><b>1. Pilih Hari di Kalender</p></b>
-                <p>   Pilih hari yang ingin kamu lihat di kalender. Setiap hari dilengkapi dengan informasi tentang bahan makanan
-                    dan olahraga yang direkomendasikan.</p>
-                <p><b>2. Eksplorasi Informasi Detail</p></b>
-                <p>   Dapatkan penjelasan rinci tentang setiap bahan makanan dan jenis olahraga. Temukan informasi nutrisi,
-                    manfaat, dan panduan pelaksanaan yang dapat membantu kamu membuat keputusan yang informasional.</p>
-                <p><b>3. Variasi dan Kreativitas</p></b>
-                <p>   Kami mendorong variasi dalam makanan dan olahraga. Temukan cara kreatif untuk memasukkan bahan makanan 
-                    sehat dan jenis olahraga yang kamu nikmati ke dalam rutinitas harianmu.</p>
+                <h1 style="color: #F77BB6;">About GurlsGoals - 30 Day Diet Program</h1>
+                <p>The GurlsGoals diet program is focused on women's health and fitness. We understand that every woman 
+                    has its own unique needs, which is why we compiled customized food and exercise recommendations 
+                    to help you achieve the best results.</p>
+                <p style="color: #F77BB6; font-size: 15px;"><b>What We Offer ?</p></b>
+                <p><b>1. Food Ingredient Recommendations</p></b>
+                <P>   We provide an in-depth explanation of various food ingredients that are suitable for your diet program. 
+                    Discover health benefits, nutritional information, and delicious recipes that can help you reach your weight loss goals.</P>
+                <p><b>2. Various Sports Recommendations</p></b>
+                <p> Our workout plans cover different types of physical activity, from cardio to strength training.</p>
+                <P><b>3. Informative 30-Day Calendar</P></b>
+                <p> Get a daily calendar that not only provides a list of meals and exercise, but also a detailed description 
+                    about each foodstuff and the type of exercise recommended. This helps you understand the reasoning behind each recommendation.</p>
+                <p style="color: #F77BB6; font-size: 15px;"><b>How do we use Calendar?</b>
+                <p><b>1. Select a Day in Calendar</p></b>
+                <p>   Select the days you want to see on the calendar. Each day is equipped with information about food
+                    and recommended exercise.</p>
+                <p><b>2. Variety and Creativity</p></b>
+                <p>   We encourage variety in food and exercise. Find creative ways to incorporate groceries 
+                    healthy and the type of exercise you like.</p>
+                <p><b>3. Mark the day</p></b>
+                <p>   Mark the day by checking a small box on the edge of the table box, if you have completed the mission each day </p>
             </div>
         </div>
     </div>

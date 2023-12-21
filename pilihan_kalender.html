@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+    <title>Pilihan_kalender</title>
+</head>
+
+<style>
+     body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FEE9F2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar { 
+        background-color: #f8f8f8;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0);
+        overflow: hidden;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #logo {
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 50px;
+    }
+
+    #calendar-btn {
+        font-size: 25px;
+        position: relative;
+        margin-right: 5px;
+        border: none; 
+        background-color: transparent; 
+    }
+
+    .pilihan{
+        margin-right: 50px;
+        margin-top: 5px;
+    }
+
+    .pilihan button{
+        margin-right: 5px;
+        border: none;
+        background-color: transparent;
+        border-radius: 5px; 
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .pilihan button a{
+        padding: 8px 10px; 
+        color: black; 
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .pilihan button:active {
+        background-color: #ffccd1; 
+    }
+
+    #my-calendar-btn {
+        background-color: #F77BB6; 
+        padding: 8px 12px;
+        border: none;
+        color: white; 
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    #my-calendar-btn:active {
+        background-color: #ffccd1; 
+    }
+
+    /*Pilihan*/
+    .Service {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px; 
+    }
+
+    .box {
+        width: 300px;
+        height: 40vw;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+        color: #fff;
+        transition: border-radius 0.3s ease;
+        margin-left: 15px;
+    }
+
+    .box img {
+        width: 100%;
+        height: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .box:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+        border-radius: 15px; 
+        overflow: hidden; 
+    }
+
+    .text1 {
+        background-color: #F77BB6;
+        color: #fff;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .text2{
+        font-size: 15px;
+        color: black;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <div id="logo"><button id="calendar-btn">📅</button>Gurlsgoals</div>
+        <div class="pilihan">
+            <button id="home-btn" onclick="goToPage('home.html')"><a id="home-btn" href="home.html">Home</a></button>
+            <button id="about-btn" onclick="goToPage('about.html')"><a id="about-btn" href="about.html">About</a></button>
+            <button id="my-calendar-btn" onclick="goToPage('calendar.html')"><a href="pilihan_kalender.html">My Calendar</a></button>
+            <button id="logout" onclick="goToPage('landing.html')"><a href="landing.html">Log Out</a></button>
+        </div>
+    </nav>
+
+    <div class="Service" id="Service">
+        <h1>Body Mass Index</h1>   
+        <h2>After checking your BMI, which weight group do you fall into?</h2>
+        
+        <div class="container">
+            <div class="box" >
+                <img src="kurus.jpg" alt="Gambar 1">
+                <div class="text1">
+                    <b>Underweight</b>
+                </div>   
+                <div class="text2">
+                    <b>  (less than 18.5)</b>
+                </div> 
+            </div>
+            <div class="box"><a href="normal.html">
+                <img src="ideal.jpg" alt="Gambar 2" onclick="goToPage('normal.html')" >
+                <div class="text1">
+                    <b>Normal Weight</b>
+                </div>   
+                <div class="text2">
+                    <b>Ideal (18,5-24,9)</b>
+                </div> 
+            </div></a>
+            <div class="box"><a href="agakgemuk.html">
+                <img src="gendut.jpg" alt="Gambar 3">
+                <div class="text1">
+                    <b>Overweight</b>
+                </div> 
+                <div class="text2">
+                    <b>Slightly Fat (25-29.9)</b>
+                </div>    
+            </div></a>
+            <div class="box"><a href="obesitas.html">
+            <img src="obesitas.jpg" alt="Gambar 2">
+            <div class="text1">
+                <b>Obesity </b>
+            </div> 
+            <div class="text2">
+                <b>Too Fat (over 30)</b>
+            </div></a>
+            </div>  
+        </div> 
+    </div>
+</body>
+</html>

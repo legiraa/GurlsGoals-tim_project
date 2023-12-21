@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitalFit Diet</title>
+    <title>Kalender agak gemuk</title>
     <style>
         body {
             font-family: 'Pacifico', cursive;
             background-color: #fce7f3; /* Soft pink background */
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -21,7 +21,8 @@
         }
     
         table {
-            width: 80%;
+            width: 95%;
+            margin: 20px auto;
             border-collapse: collapse;
             margin-top: 20px;
             background-color: #fff;
@@ -29,6 +30,7 @@
             border-radius: 8px;
         }
     
+       
         th, td {
             border: 1px solid #dddddd;
             text-align: left;
@@ -36,13 +38,15 @@
         }
     
         th {
-            background-color: #ff69b4; /* Deep pink header background */
+            background-color: #ff69b4; 
             color: white;
+            text-align: center;
         }
     
         td {
             position: relative;
             cursor: pointer;
+            vertical-align: top;
         }
     
         input[type="text"] {
@@ -81,7 +85,7 @@
 </head>
 <body>
 
-<h2>Diet Calendar</h2>
+<h2>Overweight Diet Calender</h2>
 
 <table id="calendar">
     <thead>
@@ -137,6 +141,22 @@
         localStorage.setItem(date, JSON.stringify(isCheckedArray));
     }
 
+    function loadTasksFromLocalStorage(date) {
+        var isCheckedArray = JSON.parse(localStorage.getItem(date)) || [];
+        var taskList = document.getElementById("taskList_" + date);
+
+        if (taskList) {
+            // Clear existing tasks
+            taskList.innerHTML = "";
+
+            // Generate tasks based on the stored information
+            isCheckedArray.forEach(function (isChecked, index) {
+                addTask(date, "Task " + (index + 1), isChecked);
+            });
+        }
+    }
+
+
     // Function to generate the calendar dynamically
     function generateCalendar() {
         var today = new Date();
@@ -173,127 +193,127 @@
 
                     // Example: Generate tasks for a specific date
                     if (date === "2023-12-01") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: smoothie(fruit + yogurt)", "L: protein salad with grains", "D: grilled fish + quinoa + green vegetables", "W: walk fast 30 min"]);
                     }
 
                     if (date === "2023-12-02") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: smoothie(fruit + yogurt)", "L: protein salad with grains", "D: grilled fish + quinoa + green vegetables", "W: walk fast 30 min"]);
                     }
 
                     if (date === "2023-12-03") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B: smoothie(fruit + yogurt)", "L: protein salad with grains", "D: grilled fish + quinoa + green vegetables", "W: walk fast 30 min"]);
                     }
 
                     if (date === "2023-12-04") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: smoothie(fruit + yogurt)", "L: protein salad with grains", "D: grilled fish + quinoa + green vegetables", "W: walk fast 30 min"]);
                     }
 
                     if (date === "2023-12-05") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: smoothie(fruit + yogurt)", "L: protein salad with grains", "D: grilled fish + quinoa + green vegetables", "W: walk fast 30 min"]);
                     }
 
                     if (date === "2023-12-06") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B: boiled egg + avocado", "L: vegetable wrap + grilled chicken", "D: grilled tofu with quinoa", "W: cycling 45 min"]);
                     }
 
                     if (date === "2023-12-07") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: boiled egg + avocado", "L: vegetable wrap + grilled chicken", "D: grilled tofu with quinoa", "W: cycling 45 min"]);
                     }
 
                     if (date === "2023-12-08") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: boiled egg + avocado", "L: vegetable wrap + grilled chicken", "D: grilled tofu with quinoa", "W: cycling 45 min"]);
                     }
 
                     if (date === "2023-12-09") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B: boiled egg + avocado", "L: vegetable wrap + grilled chicken", "D: grilled tofu with quinoa", "W: cycling 45 min"]);
                     }
 
                     if (date === "2023-12-10") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: boiled egg + avocado", "L: vegetable wrap + grilled chicken", "D: grilled tofu with quinoa", "W: cycling 45 min"]);
                     }
 
                     if (date === "2023-12-11") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B:oatmeal with fresh fruit pieces", "L: quinoa salad + salmon pieces", "D: grilled chicken + sweet potatoes", "W: 45min jog"]);
                     }
 
                     if (date === "2023-12-12") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B:oatmeal with fresh fruit pieces", "L: quinoa salad + salmon pieces", "D: grilled chicken + sweet potatoes", "W: 45min jog"]);
                     }
 
                     if (date === "2023-12-13") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: oatmeal with fresh fruit pieces", "L: quinoa salad + salmon pieces", "D: grilled chicken + sweet potatoes", "W: 45min jog"]);
                     }
 
                     if (date === "2023-12-14") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: oatmeal with fresh fruit pieces", "L: quinoa salad + salmon pieces", "D: grilled chicken + sweet potatoes", "W: 45min jog"]);
                     }
 
                     if (date === "2023-12-15") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B: oatmeal with fresh fruit pieces", "L: quinoa salad + salmon pieces", "D: grilled chicken + sweet potatoes", "W: 45min jog"]);
                     }
 
                     if (date === "2023-12-16") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: mixed fruit smoothie", "L: salad with nuts and pieces of meat", "D: grilled fish with quinoa and asparagus", "W: Pilates"]);
                     }
 
                     if (date === "2023-12-17") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: mixed fruit smoothie", "L: salad with nuts and pieces of meat", "D: grilled fish with quinoa and asparagus", "W: Pilates"]);
                     }
 
                     if (date === "2023-12-18") {
-                        generateTasks(date), ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"];
+                        generateTasks(date, ["B: mixed fruit smoothie", "L: salad with nuts and pieces of meat", "D: grilled fish with quinoa and asparagus", "W: Pilates"]);
                     }
 
                     if (date === "2023-12-19") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: mixed fruit smoothie", "L: salad with nuts and pieces of meat", "D: grilled fish with quinoa and asparagus", "W: Pilates"]);
                     }
 
                     if (date === "2023-12-20") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: mixed fruit smoothie", "L: salad with nuts and pieces of meat", "D: grilled fish with quinoa and asparagus", "W: Pilates"]);
                     }
 
                     if (date === "2023-12-21") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B: Boiled egg + avocado + whole wheat toast", "L: tomato soup + grilled chicken", "D: Stir-fry tempeh + vegetables + brown rice", "W: swim 45min"]);
                     }
 
                     if (date === "2023-12-22") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: Boiled egg + avocado + whole wheat toast", "L: tomato soup + grilled chicken", "D: Stir-fry tempeh + vegetables + brown rice", "W: swim 45min"]);
                     }
 
                     if (date === "2023-12-23") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: Boiled egg + avocado + whole wheat toast", "L: tomato soup + grilled chicken", "D: Stir-fry tempeh + vegetables + brown rice", "W: swim 45min"]);
                     }
 
                     if (date === "2023-12-24") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B:Boiled egg + avocado + whole wheat toast", "L: tomato soup + grilled chicken", "D: Stir-fry tempeh + vegetables + brown rice", "W: swim 45min"]);
                     }
 
                     if (date === "2023-12-25") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: Boiled egg + avocado + whole wheat toast", "L: tomato soup + grilled chicken", "D: Stir-fry tempeh + vegetables + brown rice", "W: swim 45min"]);
                     }
 
                     if (date === "2023-12-26") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: Greek yogurt", "L: Stir-fried vegetables with shrimp", "D: Steamed tofu with vegetables and brown rice"]);
                     }
 
                     if (date === "2023-12-27") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B: Greek yogurt", "L: Stir-fried vegetables with shrimp", "D: Steamed tofu with vegetables and brown rice"]);
                     }
 
                     if (date === "2023-12-28") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B: Greek yogurt", "L: Stir-fried vegetables with shrimp", "D: Steamed tofu with vegetables and brown rice"]);
                     }
 
                     if (date === "2023-12-29") {
-                        generateTasks(date, ["B: Yogurt yunani", "L: Tumis sayuran dengan udang", "D: Tahu kukus dengan sayuran dan nasi cokelat"]);
+                        generateTasks(date, ["B: Greek yogurt", "L: Stir-fried vegetables with shrimp", "D: Steamed tofu with vegetables and brown rice"]);
                     }
 
                     if (date === "2023-12-30") {
-                        generateTasks(date, ["B: Telur rebus + alpukat + roti gandum", "L: sup tomat + ayam panggang", "D: Stir-fry tempe + sayuran + nasi merah", "W: dumbbell"]);
+                        generateTasks(date, ["B: Greek yogurt", "L: Stir-fried vegetables with shrimp", "D: Steamed tofu with vegetables and brown rice"]);
                     }
 
                     if (date === "2023-12-31") {
-                        generateTasks(date, ["B: Smoothie tinggi protein", "L: Salad protein + ayam panggang", "D: Salmon panggang", "W: Jogging 30mnt"]);
+                        generateTasks(date, ["B:Greek yogurt", "L: Stir-fried vegetables with shrimp", "D: Steamed tofu with vegetables and brown rice"]);
                     }
                     cell.addEventListener("click", function () {
                         updateLocalStorage(this.id.substring(4));

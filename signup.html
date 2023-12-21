@@ -5,95 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
-    <title>Sign Up</title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>Registrasi</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FEE9F2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
 
-<style>
-    body {
-        font-family: "Montserrat", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #FEE9F2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; 
-    }
+        .signup-box {
+            background-color: #F77BB6;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
 
-    .signup-box {
-        background-color: #F77BB6;
-        padding: 20px;
-        border-radius: 10px;
-        width: 300px;
-    }
+        .signup-box form {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .signup-box form {
-        display: flex;
-        flex-direction: column;
-    }
+        .signup-box h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
 
-    .signup-box h2 {
-        text-align: center;
-        color: white;
-        margin-bottom: 20px;
-    }
+        .signup-box label {
+            margin-top: 10px;
+            color: white;
+        }
 
-    .signup-box label {
-        margin-top: 10px;
-        color: white;
-    }
+        .signup-box input {
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
 
-    .signup-box input {
-        padding: 10px;
-        margin-top: 5px;
-        border: none;
-        border-radius: 5px;
-    }
-
-    .signup-box .forgot-password {
+        .signup-box .forgot-password {
         text-align: right;
         margin-top: 10px;
-    }
+        }
 
-    .signup-box .forgot-password a {
-        color: #007BFF;
-        text-decoration: none;
-        font-size: 15px;
-    }
+        .signup-box .forgot-password a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 15px;
+        }
 
-    .signup-box button {
-        background-color: #007BFF;
-        font-size: 16px;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
+        .signup-box .button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
 
-    .signup-box button a {
-        color: white;
-        text-decoration: none;
-    }
+        .signup-box button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block; 
+            width: 100%;
+        }
 
-    .signup-box .have_account p {
-        color: #ffffff; 
-        text-align: center;
-        font-size: 15px;
-        margin-top: 25px;
-    }
+        .signup-box .have_account p {
+            color: #ffffff; 
+            text-align: center;
+            font-size: 15px;
+            margin-top: 25px;
+        }
 
-    .signup-box .have_account a {
-        color: #007BFF; 
-        text-decoration: none;
-    }
-</style>
-
+        .signup-box .have_account a {
+            color: #007BFF; 
+            text-decoration: none;
+        }
+    </style>
+</head>
 <body>
     <div class="signup-box" id="signup-box">
         <h2>Sign Up</h2>
-        <form id="signup-form">
+        <form id="signup-form" method="post" action="signup.php">
             <label for="username"><b>Username</b></label>
             <input type="text" id="username" name="username" required>
 
@@ -103,16 +104,13 @@
             <label for="password"><b>Password</b></label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit"> <a href="signin.html">Sign Up</a> </button>
-
             <div class="have_account">
-                <p>Already have an account? <a href="signin.html">Log In</a></p>
+                <button type="submit">Sign Up</button>
             </div>
-            <script src="main.JS"></script>
         </form>
+        <div class="have_account">
+            <p>Already Have Account? <a href="signin.html">Sign In</a></p>
+        </div>
     </div>
-
-
-    <script src="main.JS"></script>
 </body>
 </html>

@@ -52,7 +52,10 @@ function openModal(imageSrc, title, description) {
     descriptionElement.innerHTML = description;
 
     modal.style.display = "block";
-
+    modal.style.marginTop = "0px";
+    modal.style.padding = "40px";
+    modalImage.style.maxWidth = "550px";
+    
     document.getElementById("navbar").style.display = "none";
 }
 
@@ -78,14 +81,14 @@ function calculateBMI() {
   
     
     if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-      document.getElementById('result').innerHTML = 'Isi Dulu Yaaa!';
+      document.getElementById('result').innerHTML = 'Please Insert!!!';
       return;
     }
   
     var bmi = weight / Math.pow(height / 100, 2);
   
     var resultElement = document.getElementById('result');
-    resultElement.innerHTML = 'Hasil Body Mass Index : ' + bmi.toFixed(2);
+    resultElement.innerHTML = 'Result Body Mass Index : ' + bmi.toFixed(2);
   }
 
 /*Dari log-in pindah ke Halaman Home*/
@@ -103,7 +106,4 @@ function goToPage(page) {
     window.location.href = page;
 }
 
-/*Dari logout akan keluar ke browser yang digunakan untuk membuka websitenya*/
-document.getElementById("keluar").addEventListener("click", function() {
-    window.history.back(); 
-});
+

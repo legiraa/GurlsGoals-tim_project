@@ -5,13 +5,13 @@ body {
     background-color: #FEE9F2;
 }
 
-.navbar {
+.navbar { 
     background-color: #f8f8f8;
     padding: 15px;
     display: flex;
     justify-content: space-between;
     box-shadow: 2px 2px 10px rgba(0, 0, 0);
-    position: fixed;
+    overflow: hidden;
     width: 100%;
     z-index: 1000;
 }
@@ -27,7 +27,7 @@ body {
     position: relative;
     margin-right: 5px;
     border: none; 
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 .pilihan{
@@ -39,17 +39,23 @@ body {
     margin-right: 5px;
     border: none;
     background-color: transparent;
-    padding: 8px 12px; 
     border-radius: 5px; 
-    color: black; 
     cursor: pointer;
     font-size: 15px;
     transition: background-color 0.3s ease;
 }
 
-.pilihan button:active {
+
+.pilihan button a{
+    padding: 8px 10px; 
+    color: black; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pilihan button a:active {
     background-color: #ffccd1; 
-  }
+}
 
 #home-btn {
     background-color: #F77BB6; 
@@ -59,11 +65,12 @@ body {
     cursor: pointer;
     font-size: 15px;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 #home-btn:active {
     background-color: #ffccd1; 
-  }
+}
 
 .page1 {
     height: 100vh;
@@ -195,41 +202,39 @@ body {
 }
 
 .modal{
-    display: none;
     position: fixed;
     z-index: 1;
-    left: 0;
     top: 0;
-    width: 100%;
     height: 100%;
     background-color: #FEE9F2;
-    padding: 40px;
-}
-
-#exerciseTitle, #foodTitle {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 10%; 
-    margin-top: 10%;
-    text-align: center; 
+    display: none;
 }
 
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
     animation-name: zoom;
     animation-duration: 0.6s;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.modal-image{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25vw;
+    margin-right: 25vw;
 }
 
 .modal-description {
     font-size: 20px;
-    margin-right: 90px;
-    margin-left:50px;
     color: black;
     text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 40px;
 }
 
 @keyframes zoom {
